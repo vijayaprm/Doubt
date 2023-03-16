@@ -3,7 +3,7 @@ import {Link,useLocation} from 'react-router-dom'
 
 import './HomeMainbar.css'
 import QuestionList from './QuestionList'
-import Questions from './Questions'
+
 
 const HomeMainbar = () => {
   var questionsList =[{
@@ -44,15 +44,15 @@ const HomeMainbar = () => {
           <Link to='/AskQuestions' className='ask-btn'>Ask Question</Link>
       </div>
       <div>
-        {
-          questionsList === null ?
-          <h1>Loading...</h1> :
+        {questionsList === null ? 
+          <h1>Loading...</h1>
+         : 
           <>
             <p>{questionsList.length} questions</p>
-            <QuestionList questionList={questionsList} />
+            <QuestionList questionsList={questionsList} />
           </>
         }
-      </div>
+      </div> 
     </div>
   )
 }

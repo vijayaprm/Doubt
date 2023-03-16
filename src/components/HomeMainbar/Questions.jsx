@@ -7,8 +7,9 @@ const Questions = ({question}) => {
             <p>{question.votes}</p>
             <p>votes</p>
         </div>
-        <div className='display'>
-            
+        <div className='display-votes-ans'>
+            <p>{question.noOfAnswers}</p>
+            <p>answer</p>
         </div>
     </div>
   )
