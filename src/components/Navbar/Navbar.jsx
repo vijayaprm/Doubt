@@ -10,7 +10,7 @@ const Navbar = () => {
   var User = null
 
   return (
-   <nav>
+   <nav className='main-nav'>
     <div className='navbar'>
          <Link to='/' className='nav-item nav-logo'>
             <img src={logo} alt="logo" />
@@ -22,6 +22,8 @@ const Navbar = () => {
             <input type="text" placeholder="Search..." />
             <img src={search} alt="search" width="18" className="search-icon" />
         </form>
+       </div> 
+       <div>
         {
           User === null ?
           <Link to='/Auth' className='nav-item nav-links'>Log in</Link>:
