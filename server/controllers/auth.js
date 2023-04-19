@@ -36,7 +36,8 @@ export const login = async (req, res) => {
        {
         return res.status(400).json({message:"Invaild credentials"})
        }
-       const token =jwt
+       const token =jwt.sign({email:newUser.email,id:newUser._id},"test",{expiresIn:'1h'});
+       res.status(200).json({result:newUser,token})
    } catch(error){
        req.status(500).json("something went wrong..")
     }
