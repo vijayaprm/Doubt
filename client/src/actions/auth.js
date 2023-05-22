@@ -6,7 +6,7 @@ export const signup = (authData,navigate) => async(dispatch) => {
         dispatch({ type :'AUTH',data})
         navigate('/')
     } catch (error) {
-        console.log(error)
+        console.log(error.response.data)
     }
 }
 
@@ -16,6 +16,6 @@ export const login = (authData,navigate) => async(dispatch) => {
         dispatch({ type :'AUTH',data})
         navigate('/')
     } catch (error) {
-        console.log(error)
+        console.log(error.response.data)
     }
 }
